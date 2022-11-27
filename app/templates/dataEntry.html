@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+    <body>
+        <h1>Please provide the following information pertaining to the home:</h1>
+
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }} 
+            <p> 
+                {{ form.HouseSqFootage.label }} {{ form.HouseSqFootage() }}
+                {% for error in form.HouseSqFootage.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.YearBuilt.label }} {{ form.YearBuilt() }}
+                {% for error in form.YearBuilt.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.ZipCode.label }} {{ form.ZipCode() }}
+                {% for error in form.ZipCode.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.NumBedrooms.label }} {{ form.NumBedrooms() }}
+                {% for error in form.NumBedrooms.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.NumBathrooms.label }} {{ form.NumBathrooms() }}
+                {% for error in form.NumBathrooms.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.LotSize.label }} {{ form.LotSize() }}
+                {% for error in form.LotSize.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.Basement.label }} {{ form.Basement() }}
+                {% for error in form.Basement.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.Remodeled.label }} {{ form.Remodeled() }}
+                {% for error in form.Remodeled.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.Garage.label }} {{ form.Garage() }}
+                {% for error in form.Garage.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.Pool.label }} {{ form.Pool() }}
+                {% for error in form.Pool.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.Porch.label }} {{ form.Porch() }}
+                {% for error in form.Porch.errors %}<span style="color:red;">[{{ error }}]</span>{% endfor %}
+            </p>
+            <p>
+                {{ form.submit() }}
+            </p>
+        </form>    
+        <p style="text-align: center;">{{ output }}</p>
+    </body>
+{% endblock %}

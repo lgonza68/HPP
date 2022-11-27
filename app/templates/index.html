@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    <h2>Welcome to the House Price Predictor</h2>
+        <p>
+        The House Price Predictor is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In arcu cursus euismod quis. Dolor sit amet consectetur adipiscing. Pharetra pharetra massa massa ultricies. Amet porttitor eget dolor morbi. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Quisque egestas diam in arcu cursus euismod quis viverra. Viverra nam libero justo laoreet sit amet cursus sit. Posuere morbi leo urna molestie. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus.
+        </p>
+        <p>
+        Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Facilisis sed odio morbi quis commodo odio aenean sed adipiscing. Arcu felis bibendum ut tristique et egestas quis ipsum. Pellentesque habitant morbi tristique senectus et netus et. Iaculis eu non diam phasellus vestibulum lorem sed. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Hac habitasse platea dictumst quisque sagittis purus. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Morbi tristique senectus et netus et malesuada fames. Rhoncus est pellentesque elit ullamcorper dignissim. Faucibus vitae aliquet nec ullamcorper sit amet.
+        </p>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %} 
+{% endblock %}
